@@ -13,10 +13,19 @@ function(SrcAuto src)
     add_executable(${exeName} ${src})
 endfunction()
 
+if(APPLE)
+    set(scrs 
+    /Users/min122218/xor218/datago/list/c/list_test.c
+    )
+endif()
 
-set(scrs 
-/Users/min122218/xor218/datago/list/c/list_test.c
-)
+
+
+if(LINUX)
+    set(scrs 
+    /home/min122218/xor218/datago/list/c/Qmalloc.c
+    )
+endif()
 
 
 foreach(item ${scrs})
